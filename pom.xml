@@ -13,11 +13,12 @@
         <codeing.version>UTF-8</codeing.version>
 
         <maven.source.plugin.version>2.4</maven.source.plugin.version>
-       <redis.client.version>2.9.0</redis.client.version>
+        <redis.client.version>2.9.0</redis.client.version>
         <commons.pool.version>1.6</commons.pool.version>
         <ikanalyzer.version>2012_u6</ikanalyzer.version>
         <pinyin4j.version>2.5.1</pinyin4j.version>
-        <org.ansj.version>5.1.5</org.ansj.version>
+        <org.ansj.version>5.1.1</org.ansj.version>
+        <nlp.lang.version>1.7.2</nlp.lang.version>
     </properties>
 
     <dependencies>
@@ -51,6 +52,14 @@
             <artifactId>ansj_seg</artifactId>
             <version>${org.ansj.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.nlpcn/nlp-lang -->
+        <dependency>
+            <groupId>org.nlpcn</groupId>
+            <artifactId>nlp-lang</artifactId>
+            <version>${nlp.lang.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

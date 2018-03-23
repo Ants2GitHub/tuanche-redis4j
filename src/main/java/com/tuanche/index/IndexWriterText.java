@@ -1,5 +1,7 @@
 package com.tuanche.index;
 
+import com.tuanche.enums.AnalysisEnum;
+import com.tuanche.utils.AnalysisTextUtils;
 import com.tuanche.utils.JedisUtils;
 import com.tuanche.utils.StringUtils;
 import redis.clients.jedis.Jedis;
@@ -13,6 +15,8 @@ public class IndexWriterText {
 
     private final Jedis jedis;
     private final int dataBase;
+    private String id;
+    private String[] contentItems;
 
 
 
@@ -34,11 +38,11 @@ public class IndexWriterText {
      * @param text 文本内容
      * @return
     */
-    public void addIndexItem(String id,String text) {
-
+    public void addIdAndIndexItem(String id,String text) {
+        // 首先对text文本分词
+        this.id = id;
+        contentItems = AnalysisTextUtils.analysisText(AnalysisEnum.INDEX, text).split("\\|");
     }
 
-    private void analysisText(final String text) {
-        if(StringUtils.isEmpty(text)) {return;}
-    }
+
 }
