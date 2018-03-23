@@ -7,9 +7,13 @@ package com.tuanche.enums;
 */ 
 public enum AnalysisEnum {
 
-    BASE,   // 基础分词
-    PRECISE, // 精准分词
-    NLP, //NLP 分词
-    INDEX, // 面向索引分词
+    // 基础分词
+    BASE,
+    // 精准分词
+    PRECISE,
+    //NLP 分词
+    NLP,
+    // 面向索引分词
+    INDEX,
     
 }
